@@ -24,6 +24,7 @@ const Passwordgen = () => {
 
     const copyPasswordClipBoard=useCallback(()=>{
         passwordRef.current?.select();
+        passwordRef.current?.setSelectionRange(0,4);
         window.navigator.clipboard.writeText(password);
 
     },[password])
